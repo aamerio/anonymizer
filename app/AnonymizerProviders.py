@@ -27,7 +27,7 @@ class LocalList(BaseProvider):
 
     def llemail(self, domain="mock", extension="xyz"):
         # TODO add random name and random domain
-        email = f"{self.llname()}@{domain}{time.time()}.{extension}"
+        email = f"{self.llname()}{str(time.time())[8:10]}@{domain}{str(time.time())[-6:]}.{extension}"
         return email.lower().replace(" ", "")
 
     def llfiscal_code(self):
