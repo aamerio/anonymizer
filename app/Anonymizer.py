@@ -56,3 +56,7 @@ class Anonymizer:
             return self.faker.language_name()
         elif pattern == 'prefix':
             return self.faker.prefix()
+        elif pattern == 'city':
+            return f"{self.faker.city_prefix()} {self.faker.city()}"
+        elif pattern == 'address':
+            return self.faker.street_address()

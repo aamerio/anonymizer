@@ -9,11 +9,16 @@ load_dotenv(dotenv_path=env_path, verbose=True)
 
 connector = MysqlConnector()
 
-#fields = ['mail:llemail', 'name:llemail', 'init:llemail']
-fields = ['firstname:llname', 'lastname:llname', 'email:llemail']
+fields_drupal_users = ['mail:llemail', 'name:llemail', 'init:llemail']
+fields = [
+        'nome:llname', 
+        'cognome:llname', 
+        'indirizzo:address',
+        'citta:city',
+        'email:llemail']
 strategy = [
-    {"tablename" : "uaip_users", "pkey": "user_id", "fields": fields}
-#    {"tablename" : "be_users", "pkey": "uid", "fields": fields},
+    {"tablename" : "contact_us", "pkey": "id", "fields": fields},
+    {"tablename" : "users", "pkey": "uid", "fields": fields_drupal_users},
 #    {"tablename" : "ca_users", "pkey": "uid", "fields": fields},
 #    {"tablename" : "ch_users", "pkey": "uid", "fields": fields},
 #    {"tablename" : "de_users", "pkey": "uid", "fields": fields},
