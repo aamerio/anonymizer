@@ -19,7 +19,7 @@ fields = [
 strategy = [
     {"tablename" : "contact_us", "pkey": "id", "fields": fields},
     {"tablename" : "users", "pkey": "uid", "fields": fields_drupal_users},
-#    {"tablename" : "ca_users", "pkey": "uid", "fields": fields},
+    {"tablename" : "users_pt", "pkey": "uid", "fields": fields_drupal_users}
 #    {"tablename" : "ch_users", "pkey": "uid", "fields": fields},
 #    {"tablename" : "de_users", "pkey": "uid", "fields": fields},
 #    {"tablename" : "dk_users", "pkey": "uid", "fields": fields},

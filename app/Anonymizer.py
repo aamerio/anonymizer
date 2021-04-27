@@ -29,7 +29,7 @@ class Anonymizer:
                     field = f"{field}:"
                 updating_fields[field.split(":")[0]] = self.setNewDefinition(field.split(":")[1])
             self.db.update(tablename, f"{primary_key}={row[0]}", updating_fields)
-            stdout.write("\r%d/%d" % (i, len(rows)))
+            stdout.write("\r%s => %d/%d" % (tablename, i, len(rows)))
 
         return True
 
