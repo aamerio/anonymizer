@@ -11,15 +11,24 @@ connector = MysqlConnector()
 
 fields_drupal_users = ['mail:llemail', 'name:llemail', 'init:llemail']
 fields = [
-        'nome:llname', 
-        'cognome:llname', 
-        'indirizzo:address',
-        'citta:city',
-        'email:llemail']
+        'first_name:llname', 
+        'last_name:llname', 
+        'address1:asterisks',
+        'locality:city',
+        'email:llemail',
+        'mobile:asterisks',
+        'birthdate:nodate']
+
 strategy = [
-    {"tablename" : "contact_us", "pkey": "id", "fields": fields},
-    {"tablename" : "users", "pkey": "uid", "fields": fields_drupal_users},
-    {"tablename" : "users_pt", "pkey": "uid", "fields": fields_drupal_users}
+    {"tablename" : "admin_consumer_refers", "pkey": "id", 
+    "fields": ['referral_name:llname', 'referral_email_id:llemail']    
+    },
+    {"tablename" : "admin_consumers", "pkey": "id", "fields": fields},
+    {"tablename" : "admin_old_consumers", "pkey": "id", "fields": fields},
+    {"tablename" : "consumer_temp", "pkey": "id", 
+    "fields": ['name:llname', 'surname:llname','email:llemail']    
+    },
+#    {"tablename" : "users", "pkey": "uid", "fields": fields_drupal_users},
 #    {"tablename" : "ch_users", "pkey": "uid", "fields": fields},
 #    {"tablename" : "de_users", "pkey": "uid", "fields": fields},
 #    {"tablename" : "dk_users", "pkey": "uid", "fields": fields},

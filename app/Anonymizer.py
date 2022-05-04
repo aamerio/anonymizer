@@ -60,3 +60,7 @@ class Anonymizer:
             return f"{self.faker.city_prefix()} {self.faker.city()}"
         elif pattern == 'address':
             return self.faker.street_address()
+        elif pattern == 'asterisks':
+            return '********'
+        elif pattern == 'nodate':
+            return '1970-01-01'
